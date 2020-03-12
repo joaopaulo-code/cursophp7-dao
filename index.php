@@ -16,13 +16,30 @@ require_once("config.php");
 //echo json_encode($search);
 
 // Carrega um usuário usando o login e a senha
-$usuario = new Usuario();
-$usuario->login("paulo", "!@#$");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("paulo", "!@#$");
+//echo $usuario;
+
+/*
+//Criando um novo usuário
+$aluno = new Usuario("aluno", "@luno");
+
+$aluno->insert();
+
+echo $aluno;
+*/
 
 //$sql = new Sql();
 
 //$usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
 //echo json_encode($usuarios);
+
+$usuario = new Usuario();
+
+$usuario->loadbyId(8);
+
+$usuario->update("professor", "¨&%$#@");
+
+echo $usuario;
 ?>
